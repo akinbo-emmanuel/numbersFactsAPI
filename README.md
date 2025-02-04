@@ -102,6 +102,39 @@ data = response.json()
 print(data)
 ```
 
+## Deployment
+
+This API can be easily deployed to Render.com for free. Follow these steps:
+
+1. Create a [Render account](https://render.com)
+
+2. Click "New +" and select "Web Service"
+
+3. Connect your GitHub repository
+
+4. Fill in the deployment details:
+   - Name: `numbersFactsAPI` (or your preferred name)
+   - Environment: `Docker`
+   - Branch: `main` (or your default branch)
+   - Region: Choose the closest to your users
+   - Instance Type: Free
+
+5. Click "Create Web Service"
+
+The API will be automatically built and deployed. Render will provide you with a URL where your API is accessible.
+
+### Environment Variables
+
+No environment variables are required for basic functionality.
+
+### Testing the Deployed API
+
+Replace `your-render-url` with your actual Render URL:
+
+```bash
+curl "https://your-render-url/api/classify-number?number=371"
+```
+
 ## Technical Details
 
 - Built with Go and Gin web framework
